@@ -96,8 +96,9 @@ class PluginEgold extends GatewayPlugin
         return $CURRENCY[$currency];
     }
 
-    function credit($params)
+    public function credit($params)
     {
+        return $this->user->lang("This payment gateway does not support refunds.");
     }
 
     function singlepayment($params)
